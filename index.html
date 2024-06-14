@@ -25,6 +25,7 @@
 </head>
 
 <body>
+    <!-- Title -->
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
@@ -38,23 +39,46 @@
             </div>
         </div>
     </section>
+    <!--/ Title-->
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column">
-                    <div class="content has-text-centered">
+    <!-- Teaser and Abstract -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Video Teaser -->
+            <video id="teaser" autoplay muted loop height="100">
+                <source src="static/videos/vid_intro_teaser.mp4" type="video/mp4">
+            </video>
+            <!-- /Video Teaser -->
+            <br/>
+            <br/>
+            <!-- Abstract -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
                         <p>
-                            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>
-                            made by the amazing <a href="https://keunhong.com/">Keunhong Park</a>.
+                            From rearranging objects on a table to putting groceries into shelves,
+                            robots must plan precise action points to perform tasks accurately and reliably. In
+                            spite of the recent adoption of vision language models (VLMs) to control robot
+                            behavior, VLMs struggle to precisely articulate robot actions using language. We
+                            introduce an automatic synthetic data generation pipeline that instruction-tunes
+                            VLMs to robotic domains and needs. Using the pipeline, we train <span class="drobopoint">ROBOPOINT</span>,
+                            a VLM that predicts image keypoint affordances given language instructions. Compared
+                            to alternative approaches, our method requires no real-world data collection
+                            or human demonstration, making it much more scalable to diverse environments
+                            and viewpoints. In addition, <span class="drobopoint">ROBOPOINT</span> is a general
+                            model that enables several downstream applications such as robot navigation,
+                            manipulation, and augmented reality (AR) assistance. Our experiments demonstrate
+                            that <span class="drobopoint">ROBOPOINT</span> outperforms state-of-the-art
+                            VLMs (GPT-4o) and visual prompting techniques (PIVOT) by 21.8% in the accuracy
+                            of predicting spatial affordance and by 30.5% in the success rate of downstream tasks.
                         </p>
                     </div>
                 </div>
             </div>
+            <!-- /Abstract -->
         </div>
-    </footer>
-    <!-- /Footer -->
+    </section>
 
 </body>
 </html>
