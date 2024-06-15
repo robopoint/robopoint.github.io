@@ -22,9 +22,28 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+    <script>
+        function updateManipMethodVideo() {
+            const method = document.getElementById("single-menu-method-manipulation").value;
+            const video = document.getElementById("result-manipulation-video");
+            const uri = "static/videos/results/manipulation/" + method + ".mp4"
+            video.src = uri;
+            video.playbackRate = 1.75;
+            video.play();
+        }
+        function updateNavMethodVideo() {
+            const method = document.getElementById("single-menu-method-navigation").value;
+            const video = document.getElementById("result-navigation-video");
+            const uri = "static/videos/results/navigation/" + method + ".mp4"
+            video.src = uri;
+            video.playbackRate = 1.75;
+            video.play();
+        }
+    </script>
 </head>
 
-<body>
+<body onload="updateManipMethodVideo(); updateNavMethodVideo();">
     <!-- Title -->
     <section class="hero">
         <div class="hero-body">
@@ -109,6 +128,71 @@
             </div>
         </div>
     </section>
+
+    <!-- Manipulation method comparison -->
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <h2 class="title is-3">Results</h2>
+                        <div class="columns">
+                            <div class="column has-text-centered">
+                                <h3 class="title is-5">Manipulation Results</h3>
+                                Method
+                                <div class="select is-small">
+                                    <select id="single-menu-method-manipulation" onchange="updateManipMethodVideo()">
+                                        <option value="gpt4v" selected="selected">GPT4-V</option>
+                                        <option value="pivot">PIVOT</option>
+                                        <option value="qwenvl">QwenVL</option>
+                                        <option value="robopoint">RoboPoint</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <br>
+                                <video id="result-manipulation-video" muted autoplay loop>
+                                    <source src="static/videos/results/manipulation/gpt4v.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Manipulation method comparison -->
+
+    <!-- Navigation method comparison -->
+    <section class="section">
+        <div class="container is-max-widescreen">
+            <div class="rows">
+                <div class="rows is-centered ">
+                    <div class="row is-full-width">
+                        <div class="columns">
+                            <div class="column has-text-centered">
+                                <h3 class="title is-5">Navigation Results</h3>
+                                Method
+                                <div class="select is-small">
+                                    <select id="single-menu-method-navigation" onchange="updateNavMethodVideo()">
+                                        <option value="gpt4v" selected="selected">GPT4-V</option>
+                                        <option value="pivot">PIVOT</option>
+                                        <option value="robopoint">RoboPoint</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <br>
+                                <video id="result-navigation-video" muted autoplay loop>
+                                    <source src="static/videos/results/navigation/gpt4v.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Navigation method comparison -->
+
 
 </body>
 </html>
