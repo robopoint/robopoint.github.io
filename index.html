@@ -102,7 +102,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column is-full-width">
-                    <h2 class="title is-3">Approach</h2>
+                    <h2 class="title is-3">Downstream Application</h2>
                     <div class="columns is-vcentered interpolation-panel">
                         <div class="column  has-text-centered">
                             <video autoplay controls muted loop playsinline>
@@ -121,6 +121,13 @@
                                 <source src="static/videos/vid_navigation.mp4" type="video/mp4">
                             </video>
                             <p >Navigation</p>
+                        </div>
+                        <div class="columns is-centered">
+                        <div class="column has-text-centered">
+                            <figure>
+                                <img src="static/images/overview.png" alt="Robot Arm">
+                                <figcaption>An RGB image is rendered from a procedurally generated 3D scene. We compute spatial relations from the camera's perspective and generate affordances by sampling points within object masks and object-surface intersections. These instruction-point pairs fine-tune the language model. During deployment, \method\ predicts 2D action points from an image and instruction, which are projected into 3D using a depth map. The robot then navigates to these 3D targets with a motion planner.</figcaption>
+                            </figure>
                         </div>
                     </div>
                 </div>
